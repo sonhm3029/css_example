@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center;
+    align-items: center; */
+    background-color: #f6f5f8;
+    height: 100vh;
+    padding: 16px;
+   
+}
+
+/*                  Toast mesage                */
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 999999;
+}
+
+
+.toast {
+    display: flex;
+    padding: 24px 16px;
+    margin: 16px 0px;
+    align-items: center;
+    /* min-width: 500px; */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-left: 6px solid;
+    animation: slideIn ease 1s, fadeOut linear 1s 4s forwards;;
+    
+    transition: all linear 0.3s;  
+    max-height: 94px;
+}
+
+@keyframes slideIn{
+    from {
+        transform: translateX(calc(100% + 32px));
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to{
+        opacity: 0;;
+    }
+}
+
+.toast__head {
+    padding: 8px 16px;
+    font-size: 24px;
+}
+
+.toast__body {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.toast__body p {
+    font-weight:600;
+    opacity: 0.4;
+}
+
+.toast__close {
+    padding: 8px 16px;
+    font-size: 20px;
+    opacity: 0.4;
+}
+
+
+.toast--success {
+    border-color: #47d664;
+}
+.toast__head--success {
+    color: #47d664;
+}
+
+.toast--info {
+    border-color: #3086eb;
+}
+
+.toast__head--info {
+    color: #3086eb;
+}
+
+.toast--warning {
+    border-color: #ffc122;
+}
+
+.toast__head--warning {
+    color: #ffc122;
+}
+
+
+.toast__close:hover {
+    cursor: pointer;
+    background-color: black;
+    opacity: 0.2;
+    color: whitesmoke;
+    border-radius: 360px;
+}
+
+
+/*               End Toast mesage                */
+
+
+
+/*               Button                           */
+
+
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: coral;
+    border-radius: 50px;
+    color: white;
+    transition: opacity 0.2s ease;
+    outline: none;
+    text-decoration: none;
+    border:none;
+    min-width: 120px;
+    max-height: 42px ;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    /* color: #ccc; */
+}
+
+.btn + .btn {
+    margin-left: 16px;
+}
+
+
+.btn--success {
+    background-color: #71be34;
+}
+
+.btn--danger {
+    background-color: #ff623d;
+}
+
+.btn--disabled {
+    opacity: 0.5 !important;
+    cursor: default;
+  }
+
+
+/*                   End button                  */

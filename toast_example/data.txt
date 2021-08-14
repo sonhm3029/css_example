@@ -1,0 +1,28 @@
+<div class="toast toast--success">
+    <div class="toast__head toast__head--success"><i class="fas fa-check-circle"></i></div>
+    <div class="toast__body">
+        <h2>Success</h2>
+        <p>Anyone with success can view your invited visitor.</p>
+    </div>
+    <div class="toast__close"><i class="fas fa-times"></i></div>
+</div>
+
+
+<div class="toast toast--info">
+    <div class="toast__head toast__head--info"><i class="fas fa-info-circle"></i></div>
+    <div class="toast__body">
+        <h2>Info</h2>
+        <p>Anyone with success can view your invited visitor.</p>
+    </div>
+    <div class="toast__close"><i class="fas fa-times"></i></div>
+</div>
+
+
+<div class="toast toast--warning">
+    <div class="toast__head toast__head--warning"><i class="fas fa-exclamation-circle"></i></div>
+    <div class="toast__body">
+        <h2>Warning</h2>
+        <p>Anyone with success can view your invited visitor.</p>
+    </div>
+    <div class="toast__close"><i class="fas fa-times"></i></div>
+</div>

@@ -1,0 +1,132 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 16px 16px;
+}
+
+/*  Navbar for pc */
+.navbar-pc {
+    display: inline-block;
+}
+
+.nav-pc-item {
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.nav-pc-link {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-toggle {
+    padding: 8px;
+    display: none;
+}
+
+.menu-toggle:hover {
+    cursor: pointer;
+}
+
+.menu-toggle svg{
+    width: 28px;
+    height: 28px;
+    margin-top: 8px;
+}
+
+
+/* Cover navbar mobile */
+
+.cover {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.05);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* transform: translateX(-100%); */
+    display: none;
+    transition: display 2s;
+}
+
+/*  Navbar for mobile */
+
+.navbar-mobile {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    list-style-type: none;
+    background-color: white;
+    min-width: 240px;
+    padding-top: 32px;
+    padding-left: 24px;
+    /* display: none; */
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 2s, opacity 2s;
+}
+
+
+
+.nav-mobile-item {
+    padding: 8px 16px;
+}
+
+.nav-mobile-link {
+    text-decoration: none;
+    color: black
+    
+}
+
+.close-btn {
+    position:absolute;
+    right: 0px;
+    top: 0px;
+    padding: 8px;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+    background-color: black;
+    opacity: 0.1;
+}
+
+.close-btn svg {
+    width: 28px;
+    height: 28px;
+    color: #ccc;
+    
+}
+
+#input-nav:checked ~ .navbar-mobile{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#input-nav:checked ~ .cover {
+    /* transform: translateX(0); */
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    .navbar-pc {
+        display: none;
+    }
+
+}
